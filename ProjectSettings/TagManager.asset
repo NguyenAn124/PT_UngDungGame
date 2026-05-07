@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Coin
+  - Trap
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -38,14 +41,29 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2515885523
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1100002181
+    locked: 0
+  - name: Ground
+    uniqueID: 3465265809
+    locked: 0
+  - name: Enemy
+    uniqueID: 2078480517
     locked: 0
   - name: Player
     uniqueID: 3613879127
     locked: 0
-  - name: Ground
-    uniqueID: 3465265809
+  - name: Item
+    uniqueID: 553141085
+    locked: 0
+  - name: Ui
+    uniqueID: 181629323
     locked: 0
   m_RenderingLayers:
   - Default
