@@ -3,25 +3,25 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    private int score = 0;
+
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameOverUi;
+    [SerializeField] private GameObject gameWinUi;
+    public int score;
     private bool isGameOver = false;
+    private bool isGameWin = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         UpdateScore();
         gameOverUi.SetActive(false);
+        gameWinUi.SetActive(false); 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void AddScore(int points)
     {
-        if (!isGameOver)
+        if (!isGameOver&&!isGameWin)
         {
             score += points;
             UpdateScore();
@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         gameOverUi.SetActive(true);
     }
+    public void GameWin()
+    {
+        isGameWin = true;
+        Time.timeScale = 0;
+        gameWinUi.SetActive(true);
+    }
     public void RestarGame()
     {
         isGameOver = false;
@@ -47,8 +53,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Game");
     }
+    public void GotoMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+    }
     public bool IsGameOver()
     {
         return isGameOver;
+    }
+    public bool IsGameWin()
+    {
+        return isGameWin;
     }
 }
