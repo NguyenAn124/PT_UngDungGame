@@ -5,4 +5,4 @@
 /[Ll]ogs/
 /[Uu]serSettings/
 *.csproj
-*.sln
+*.sln.vs/  Library/  Temp/ 

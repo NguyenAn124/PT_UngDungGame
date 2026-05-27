@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
@@ -10,4 +10,5 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

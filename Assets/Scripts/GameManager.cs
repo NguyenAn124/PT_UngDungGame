@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     {
         UpdateScore();
         gameOverUi.SetActive(false);
-        gameWinUi.SetActive(false); 
+        gameWinUi.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void AddScore(int points)
